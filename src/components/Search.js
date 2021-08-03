@@ -30,7 +30,7 @@ class Search extends Component {
             this.props.getQuery(this.state.searchInput,this.state.sortby,this.state.limit)
             this.setState(()=>({
                 searchInput:''
-            }))
+            }),()=>this.props.getQuery(this.state.searchInput,this.state.sortby,this.state.limit))
         }
         event.preventDefault();
     }
